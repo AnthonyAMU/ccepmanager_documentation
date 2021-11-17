@@ -21,11 +21,13 @@ A popup will show relevant preprocessed iEEG files or cropped stimulations to di
 
 .. figure:: art/cpman_timeseries_anywave.png
 	:width: 600px	
+	:align: center
 	
 	**Time series visualization.** *It is possible to visualize preprocessed iEEG file(s) or cropped stimulation(s) in* :ref:`AnyWave <AnyWave>` *.*
 			
 .. figure:: art/anywave.png
 	:width: 600px
+	:align: center
 
 	**AnyWave.** *Visualization of a cropped stimulation using* :ref:`AnyWave <AnyWave>` *.*
 
@@ -39,6 +41,7 @@ A popup will show all cropped stimulations.
 
 .. figure:: /art/cpman_validate.png
 	:width: 600px
+	:align: center
 	
 	**Display and validate cropped stimulation.** *Select files to display in* :ref:`AnyWave<AnyWave>` *and validate bad channels.*
 
@@ -50,6 +53,7 @@ used by CCEP Manager during the validation process to update bad channels in all
 
 .. figure:: art/badchannels.png
 	:width: 600px
+	:align: center
 
 	**Bad channels.** *Specify bad channels in* :ref:`AnyWave<AnyWave>` *by editing the montage.*
 	
@@ -70,6 +74,7 @@ By default, the HiBoP project will be created in the */code* directory of the ac
 
 .. figure:: art/hibopex.png
 	:width: 600px
+	:align: center
 	
 	**HiBoP.** *Visualization of a CCEP using HiBoP.*
 	

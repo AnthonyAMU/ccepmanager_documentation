@@ -12,6 +12,7 @@ or exploring results using :ref:`dedicated tools <tools>`.
 
 .. figure:: /art/cpman_main_ui.png
 	:width: 1000px
+	:align: center
 	
 | 		**1 - App management**: Administer the application.
 | 		**2 - BIDS management**: Select/refresh the active BIDS database.

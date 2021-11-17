@@ -12,6 +12,7 @@ or exploring results using :ref:`dedicated tools <tools>`.
 
 .. figure:: /art/cpman_main_ui.png
 	:width: 1000px
+	:align: center
 	
 | 		**1 - App management**: Administer the application.
 | 		**2 - BIDS management**: Select/refresh the active BIDS database.
@@ -29,6 +30,7 @@ Application parameters are accessible by clicking |parameters button|.
 
 .. figure:: art/cpman_parameters_ui.png
 	:width: 200px
+	:align: center
 	
 | 		**1 - Dependencies**: Specify the paths to external softwares.
 | 		**2 - Report**: Send a bug report.
@@ -48,6 +50,7 @@ the root directory of the appropriate BIDS database.
 
 .. figure:: art/cpman_BIDS_ui.png
 	:width: 500px	
+	:align: center
 
 |		**1 - Home**: Path to the active BIDS database.
 |		**2 - Browse**: Specify the active BIDS database.
@@ -65,6 +68,7 @@ It is possible to filter the :ref:`interactive table<panels UI>` by clicking |fi
 
 .. figure:: art/cpman_filter_ui.png
 	:width: 400px	
+	:align: center
 
 |		**1 - Name**: Filter the table by subject name.
 |		**2 - BIDS**: Filter the table using BIDS entities.
@@ -88,6 +92,7 @@ by clicking |wrench button|. The tools available differ depending on the process
 
 .. figure:: art/cpman_tools_ui.png
 	:width: 200px	
+	:align: center
 	
 |		**1 - Time series**: :ref:`Visualize time series with AnyWave<time series visualization>`.
 |		**2 - CCEP**: :ref:`Visualize CCEP in 3D with HiBoP<CCEP visualization>`.
@@ -101,7 +106,8 @@ The toolbar is used to quickly (un)-select cells from the :ref:`interactive tabl
 .. _toolbar UI:
 
 .. figure:: art/cpman_toolbar_ui.png
-	:width: 75px	
+	:width: 75px
+	:align: center	
 	
 |		**1 - Reset flters**: Reset all filters.
 |		**2 - Clear selection**: Clear the active selection.
@@ -118,6 +124,7 @@ the active selection.
 
 .. figure:: art/cpman_contextual_ui.png
 	:width: 300px	
+	:align: center
 	
 |		**1 - Open**: Open the step directory in the file browser.
 |		**2 - Explore**: :ref:`View detailed step information<Details UI>`.
@@ -139,6 +146,7 @@ The subjects and steps appearing depend on the selection made in the :ref:`inter
 
 .. figure:: art/cpman_details_ui.png
 	:width: 1000px
+	:align: center
 	
 |	**1 - Subject list**: List of selectable subjects.
 |	**2 - Path**: Path to the step directory.
@@ -170,6 +178,7 @@ The description of the processing steps and associated parameters can be found i
 
 .. figure:: art/cpman_run_ui.png
 	:width: 1000px
+	:align: center
 	
 |	**1 - Run**: Start processing data.
 |	**2 - Force**: Toggle to bypass checkups before execution.
