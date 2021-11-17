@@ -96,7 +96,7 @@
 <span id="id1"></span><h1>Quick start<a class="headerlink" href="#quick-start" title="Permalink to this headline"></a></h1>
 <p>CCEP Manager is a BIDS app allowing the processing of iEEG data coupled with electrical stimulation
 for the extraction of CCEP features and the generation of connectivity atlases.</p>
-<figure class="align-default" id="id2">
+<figure class="align-center" id="id2">
 <a class="reference internal image-reference" href="_images/cpman_main.png"><img alt="_images/cpman_main.png" src="_images/cpman_main.png" style="width: 1000px;" /></a>
 <figcaption>
 <p><span class="caption-text"><strong>CCEP Manager.</strong> <em>Main inferface.</em></span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
@@ -141,7 +141,7 @@ The last <a class="reference internal" href="process.html#features-step"><span c
 and selecting the <em>DEPENDENCIES</em> option (<a class="reference internal" href="_images/dependencies_20_100x100.png"><img alt="dependencies button" src="_images/dependencies_20_100x100.png" style="width: 25px;" /></a>).
 A popup will appear allowing to specify (<a class="reference internal" href="_images/open_20_100x100.png"><img alt="open button" src="_images/open_20_100x100.png" style="width: 25px;" /></a>) the paths of both <a class="reference internal" href="prerequisites.html#anywave"><span class="std std-ref">AnyWave</span></a> and <a class="reference internal" href="prerequisites.html#hibop"><span class="std std-ref">HiBoP</span></a> executable files.
 Don’t forget to save modifications clicking <a class="reference internal" href="_images/save_20_100x100.png"><img alt="save button" src="_images/save_20_100x100.png" style="width: 25px;" /></a> before closing the popup.</p>
-<figure class="align-default" id="id3">
+<figure class="align-center" id="id3">
 <span id="ui-dependencies"></span><a class="reference internal image-reference" href="_images/cpman_dependencies.png"><img alt="_images/cpman_dependencies.png" src="_images/cpman_dependencies.png" style="width: 1000px;" /></a>
 <figcaption>
 <p><span class="caption-text"><strong>Specify dependencies.</strong> <em>Specify the paths to</em> <a class="reference internal" href="prerequisites.html#anywave"><span class="std std-ref">AnyWave</span></a> <em>and</em> <a class="reference internal" href="prerequisites.html#hibop"><span class="std std-ref">HiBoP</span></a> <em>on your system.</em></span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
@@ -156,7 +156,7 @@ Don’t forget to save modifications clicking <a class="reference internal" href
 </figure>
 <p>Once a valid BIDS database is selected the interface will update showing the list of subjects
 and the status of each processing step in the form of an <a class="reference internal" href="#ui-table"><span class="std std-ref">interactive table</span></a>.</p>
-<figure class="align-default" id="id5">
+<figure class="align-center" id="id5">
 <span id="ui-table"></span><a class="reference internal image-reference" href="_images/cpman_table.png"><img alt="_images/cpman_table.png" src="_images/cpman_table.png" style="width: 1000px;" /></a>
 <figcaption>
 <p><span class="caption-text"><strong>Interactive table.</strong> <em>The table shows, for each patient, the status of each step forming the processing pipeline.</em></span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
@@ -168,8 +168,8 @@ and the status of each processing step in the form of an <a class="reference int
 <p>Cells from the <a class="reference internal" href="#ui-table"><span class="std std-ref">interactive table</span></a> are selectable and a number of contextual actions can be performed
 on the active selection. Select the first 3 steps of a subject who has the iEEG data you would like
 to process and for which the corresponding <a class="reference internal" href="prerequisites.html#implantation-files"><span class="std std-ref">implantation file(s)</span></a> have been prepared.
-Then, right click the table and select the <em>RUN</em> option (<a class="reference internal" href="_images/pipeline_20_100x100.png"><img alt="pipeline button" src="_images/pipeline_20_100x100.png" style="width: 25px;" /></a>) from the contextual menu to spawn the <a class="reference external" href="data:ref">data:ref</a>:<cite>processing interface&lt;Process UI&gt;</cite>.</p>
-<figure class="align-default" id="id6">
+Then, right click the table and select the <em>RUN</em> option (<a class="reference internal" href="_images/pipeline_20_100x100.png"><img alt="pipeline button" src="_images/pipeline_20_100x100.png" style="width: 25px;" /></a>) from the contextual menu to spawn the data <a class="reference internal" href="interface.html#process-ui"><span class="std std-ref">processing interface</span></a>.</p>
+<figure class="align-center" id="id6">
 <a class="reference internal image-reference" href="_images/cpman_pipeline.png"><img alt="_images/cpman_pipeline.png" src="_images/cpman_pipeline.png" style="width: 1000px;" /></a>
 <figcaption>
 <p><span class="caption-text"><strong>Prepare a pipeline.</strong> <em>Right click the table after selecting processing steps (cells) to access contextual options.</em></span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
@@ -181,7 +181,7 @@ Then, right click the table and select the <em>RUN</em> option (<a class="refere
 <p>The <a class="reference internal" href="#ui-configure"><span class="std std-ref">data processing interface</span></a> lets you configure the steps you have previously chosen in
 the <a class="reference internal" href="#ui-table"><span class="std std-ref">interactive table</span></a>.
 Selecting a subject allows to configure the step parameters in the corresponding tab.</p>
-<figure class="align-default" id="id7">
+<figure class="align-center" id="id7">
 <span id="ui-configure"></span><a class="reference internal image-reference" href="_images/cpman_configure.png"><img alt="_images/cpman_configure.png" src="_images/cpman_configure.png" style="width: 1000px;" /></a>
 <figcaption>
 <p><span class="caption-text"><strong>Data processing interface.</strong> <em>It is possible to configure each step separately
@@ -193,7 +193,7 @@ corresponding to <a class="reference external" href="https://bids-specification.
 (key-value pairs) in order to filter the iEEG data to process from the BIDS database.
 Click on the <em>Implantation file</em> button to browse and select
 the <a class="reference internal" href="prerequisites.html#implantation-files"><span class="std std-ref">implantation file</span></a> (*.csv) that will be matched with the filtered iEEG data.</p>
-<figure class="align-default" id="id8">
+<figure class="align-center" id="id8">
 <span id="ui-implantation"></span><a class="reference internal image-reference" href="_images/cpman_implantation.png"><img alt="_images/cpman_implantation.png" src="_images/cpman_implantation.png" style="width: 400px;" /></a>
 <figcaption>
 <p><span class="caption-text"><strong>Implantation step parameters.</strong> <em>Filter the iEEG data from the BIDS database
@@ -209,7 +209,7 @@ In the meantime, it is possible to define an other pipeline and process data fol
 <section id="perform-quality-control">
 <h3>Perform quality control<a class="headerlink" href="#perform-quality-control" title="Permalink to this headline"></a></h3>
 <p>Once data processing is over, click <a class="reference internal" href="_images/refresh_20_100x100.png"><img alt="refresh button" src="_images/refresh_20_100x100.png" style="width: 25px;" /></a> to refresh the table.</p>
-<figure class="align-default" id="id9">
+<figure class="align-center" id="id9">
 <span id="ui-refresh"></span><a class="reference internal image-reference" href="_images/cpman_refresh.png"><img alt="_images/cpman_refresh.png" src="_images/cpman_refresh.png" style="width: 500px;" /></a>
 <figcaption>
 <p><span class="caption-text"><strong>Refresh button.</strong> <em>Parses the BIDS database to update the</em> <a class="reference internal" href="#ui-table"><span class="std std-ref">interactive table</span></a> <em>.</em></span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
@@ -220,7 +220,7 @@ However, the <a class="reference internal" href="process.html#cropping-step"><sp
 qualitatively controlled and validated first.</p>
 <p>Select the <a class="reference internal" href="process.html#cropping-step"><span class="std std-ref">cropping step</span></a> and then the <em>TIME SERIES</em> option (<a class="reference internal" href="_images/timeseries_20_100x100.png"><img alt="timeseries tool" src="_images/timeseries_20_100x100.png" style="width: 25px;" /></a>)
 after clicking <a class="reference internal" href="_images/wrench_20_100x100.png"><img alt="wrench button" src="_images/wrench_20_100x100.png" style="width: 25px;" /></a>.</p>
-<figure class="align-default" id="id10">
+<figure class="align-center" id="id10">
 <span id="ui-timeseries"></span><a class="reference internal image-reference" href="_images/cpman_timeseries.png"><img alt="_images/cpman_timeseries.png" src="_images/cpman_timeseries.png" style="width: 300px;" /></a>
 <figcaption>
 <p><span class="caption-text"><strong>Visualize time series.</strong> <em>It is possible to visualize time series for
@@ -229,14 +229,14 @@ the</em> <a class="reference internal" href="process.html#preprocessing-step"><s
 </figure>
 <p>The popup <a class="reference internal" href="#ui-validate"><span class="std std-ref">illustrated below</span></a> allows the selection of one or multiple cropped
 stimulations to <em>DISPLAY</em> (<a class="reference internal" href="_images/anywave_20_100x100.png"><img alt="anywave software" src="_images/anywave_20_100x100.png" style="width: 25px;" /></a>) in <a class="reference internal" href="prerequisites.html#anywave"><span class="std std-ref">AnyWave</span></a>.</p>
-<figure class="align-default" id="id11">
+<figure class="align-center" id="id11">
 <span id="ui-validate"></span><a class="reference internal image-reference" href="_images/cpman_validate.png"><img alt="_images/cpman_validate.png" src="_images/cpman_validate.png" style="width: 500px;" /></a>
 <figcaption>
 <p><span class="caption-text"><strong>Display and validate cropped stimulation.</strong> <em>Select files to display in</em> <a class="reference internal" href="prerequisites.html#anywave"><span class="std std-ref">AnyWave</span></a> <em>and validate bad channels.</em></span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>In <a class="reference internal" href="prerequisites.html#anywave"><span class="std std-ref">AnyWave</span></a>, you can edit the montage and specify bad channels as <a class="reference internal" href="#ui-anywave"><span class="std std-ref">illustrated below</span></a>.</p>
-<figure class="align-default" id="id12">
+<figure class="align-center" id="id12">
 <span id="ui-anywave"></span><a class="reference internal image-reference" href="_images/cpman_anywave.png"><img alt="_images/cpman_anywave.png" src="_images/cpman_anywave.png" style="width: 600px;" /></a>
 <figcaption>
 <p><span class="caption-text"><strong>Specify bad channels.</strong> <em>Use</em> <a class="reference internal" href="prerequisites.html#anywave"><span class="std std-ref">AnyWave</span></a> <em>to edit the montage and specify bad channels before validating a cropped stimulation.</em></span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>

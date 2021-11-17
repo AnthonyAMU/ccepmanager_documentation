@@ -11,6 +11,7 @@ for the extraction of CCEP features and the generation of connectivity atlases.
 
 .. figure:: /art/cpman_main.png
 	:width: 1000px
+	:align: center
 
 	**CCEP Manager.** *Main inferface.*
 
@@ -77,6 +78,7 @@ Don't forget to save modifications clicking |save button| before closing the pop
 
 .. figure:: /art/cpman_dependencies.png
 	:width: 1000px
+	:align: center
 	
 	**Specify dependencies.** *Specify the paths to* :ref:`AnyWave<AnyWave>` *and* :ref:`HiBoP<HiBoP>` *on your system.*
 
@@ -97,6 +99,7 @@ and the status of each processing step in the form of an :ref:`interactive table
 
 .. figure:: /art/cpman_table.png
 	:width: 1000px
+	:align: center
 	
 	**Interactive table.** *The table shows, for each patient, the status of each step forming the processing pipeline.*
 
@@ -106,13 +109,14 @@ Define a processing pipeline
 Cells from the :ref:`interactive table<ui table>` are selectable and a number of contextual actions can be performed
 on the active selection. Select the first 3 steps of a subject who has the iEEG data you would like
 to process and for which the corresponding :ref:`implantation file(s)<implantation files>` have been prepared.
-Then, right click the table and select the *RUN* option (|pipeline button|) from the contextual menu to spawn the data:ref:`processing interface<Process UI>`.
+Then, right click the table and select the *RUN* option (|pipeline button|) from the contextual menu to spawn the data :ref:`processing interface<Process UI>`.
 
 .. |pipeline button| image:: art/pipeline_20_100x100.png
 	:width: 25px
 	
 .. figure:: /art/cpman_pipeline.png
 	:width: 1000px
+	:align: center
 
 	**Prepare a pipeline.** *Right click the table after selecting processing steps (cells) to access contextual options.*
 
@@ -127,6 +131,7 @@ Selecting a subject allows to configure the step parameters in the corresponding
 
 .. figure:: /art/cpman_configure.png
 	:width: 1000px
+	:align: center
 
 	**Data processing interface.** *It is possible to configure each step separately
 	in the corresponding tab after selecting a subject in the list.*
@@ -141,6 +146,7 @@ the :ref:`implantation file<implantation files>` (\*.csv) that will be matched w
 
 .. figure:: /art/cpman_implantation.png
 	:width: 400px
+	:align: center
 
 	**Implantation step parameters.** *Filter the iEEG data from the BIDS database
 	and match them with a carefully crafted* :ref:`implantation file<implantation files>` *.*
@@ -166,6 +172,7 @@ Once data processing is over, click |refresh button| to refresh the table.
 
 .. figure:: /art/cpman_refresh.png
 	:width: 500px
+	:align: center
 	
 	**Refresh button.** *Parses the BIDS database to update the* :ref:`interactive table<ui table>` *.*
 	
@@ -189,6 +196,7 @@ after clicking |wrench button|.
 
 .. figure:: /art/cpman_timeseries.png
 	:width: 300px
+	:align: center
 	
 	**Visualize time series.** *It is possible to visualize time series for
 	the* :ref:`preprocessing<preprocessing step>` *or* :ref:`cropping<cropping step>` *steps using* :ref:`AnyWave<AnyWave>`.
@@ -203,6 +211,7 @@ stimulations to *DISPLAY* (|anywave software|) in :ref:`AnyWave<AnyWave>`.
 
 .. figure:: /art/cpman_validate.png
 	:width: 500px
+	:align: center
 	
 	**Display and validate cropped stimulation.** *Select files to display in* :ref:`AnyWave<AnyWave>` *and validate bad channels.*
 
@@ -212,6 +221,7 @@ In :ref:`AnyWave<AnyWave>`, you can edit the montage and specify bad channels as
 
 .. figure:: /art/cpman_anywave.png
 	:width: 600px
+	:align: center
 
 	**Specify bad channels.** *Use* :ref:`AnyWave<AnyWave>` *to edit the montage and specify bad channels before validating a cropped stimulation.*
 
