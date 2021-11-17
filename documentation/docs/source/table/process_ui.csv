@@ -1,0 +1,16 @@
+**WIDGET**, **DESCRIPTION** , **Figure**
+**Subject list**,**List of selectable subjects.**,**1**
+Subject,Active subject.,1a
+**Execution**,**Manage the execution of steps.**,**2**
+Process,Start processing data.,2a
+Clean,Toggle to delete the output folder before execution.,2b
+Force,Toggle to bypass checkups before execution.,2c
+Console,Toggle to display the console.,2d
+**Step tabs**,**Tab for each step of the active subject.**,**3**
+Implantation,Implantation tab (3.1.1).,NS
+Preprocessing,Preprocessing tab (3.1.2).,NS
+Cropping,Cropping tab (3.1.3).,NS
+Features,Features tab (3.1.5).,3a
+**Console**,**Display execution logs.**,**4**
+Clear,Clear the console.,4a
+Save,Save the console in a text file.,4b

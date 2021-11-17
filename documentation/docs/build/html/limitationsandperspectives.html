@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Limitations and perspectives &mdash; CCEP Manager 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Acknowledgments (EMPTY)" href="acknowledgments.html" />
+    <link rel="prev" title="Troubleshooting (EMPTY)" href="troubleshooting.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> CCEP Manager
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface.html">User interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="process.html">Processing data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="atlases.html">Atlases (EMPTY)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting (EMPTY)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Limitations and perspectives</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#multiple-sets-of-parameters">Multiple sets of parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overwrite-or-keep-preexisting-data">Overwrite or keep preexisting data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#use-bipolar-or-monopolar-montage">Use bipolar or monopolar montage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments (EMPTY)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hip.html">CCEP Manager in the HIP (EMPTY)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials (EMPTY)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CCEP Manager</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Limitations and perspectives</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/limitationsandperspectives.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="limitations-and-perspectives">
+<h1>Limitations and perspectives<a class="headerlink" href="#limitations-and-perspectives" title="Permalink to this headline"></a></h1>
+<section id="multiple-sets-of-parameters">
+<h2>Multiple sets of parameters<a class="headerlink" href="#multiple-sets-of-parameters" title="Permalink to this headline"></a></h2>
+<p>For a given subject, it is impossible to process the data using different sets of parameters.
+The last execution will systematically overwrite the previous one, the data associated with a previous execution will be lost.
+A feature allowing to create and choose presets of parameters for each step and keep the corresponding output files may be implemented.</p>
+</section>
+<section id="overwrite-or-keep-preexisting-data">
+<h2>Overwrite or keep preexisting data<a class="headerlink" href="#overwrite-or-keep-preexisting-data" title="Permalink to this headline"></a></h2>
+<p>CCEP Manager will execute a step using all available inputs (except for the implantation step)
+and will re-process and overwrite already processed data.
+A feature allowing the user to select a subset of inputs for a given step may be implemented.</p>
+</section>
+<section id="use-bipolar-or-monopolar-montage">
+<h2>Use bipolar or monopolar montage<a class="headerlink" href="#use-bipolar-or-monopolar-montage" title="Permalink to this headline"></a></h2>
+<p>CCEP Manager is an implementation of the F-Tract processing pipeline which computes bipolar montage
+before <a class="reference internal" href="process.html#features-step"><span class="std std-ref">feature extraction</span></a>.
+It is currently not possible to extract features from monopolar channels but an option may be available in upcoming versions.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="troubleshooting.html" class="btn btn-neutral float-left" title="Troubleshooting (EMPTY)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="acknowledgments.html" class="btn btn-neutral float-right" title="Acknowledgments (EMPTY)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Anthony Boyer.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

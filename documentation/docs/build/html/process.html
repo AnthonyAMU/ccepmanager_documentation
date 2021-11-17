@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Processing data &mdash; CCEP Manager 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Atlases (EMPTY)" href="atlases.html" />
+    <link rel="prev" title="User interface" href="interface.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> CCEP Manager
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface.html">User interface</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Processing data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#processing-steps">Processing steps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#implantation-step">Implantation step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#preprocessing-step">Preprocessing step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cropping-step">Cropping step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quality-control">Quality control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#features-step">Features step</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#step-information">Step information</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-status">Step status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-report">Step report</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="atlases.html">Atlases (EMPTY)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting (EMPTY)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limitationsandperspectives.html">Limitations and perspectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments (EMPTY)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hip.html">CCEP Manager in the HIP (EMPTY)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials (EMPTY)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CCEP Manager</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Processing data</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/process.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="processing-data">
+<span id="id1"></span><h1>Processing data<a class="headerlink" href="#processing-data" title="Permalink to this headline"></a></h1>
+<p>The processing pipeline in CCEP Manager consists in 4 sequential steps :</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#implantation-step"><span class="std std-ref">implantation step</span></a>.</p></li>
+<li><p><a class="reference internal" href="#preprocessing-step"><span class="std std-ref">preprocessing step</span></a>.</p></li>
+<li><p><a class="reference internal" href="#cropping-step"><span class="std std-ref">cropping step</span></a> + <a class="reference internal" href="#quality-control"><span class="std std-ref">quality control</span></a>.</p></li>
+<li><p><a class="reference internal" href="#features-step"><span class="std std-ref">features step</span></a>.</p></li>
+</ol>
+<p>In practice terms, processing data simply requires to select the desired steps in the <a class="reference internal" href="interface.html#panels-ui"><span class="std std-ref">interactive table</span></a>
+and execute them in the dedicated <a class="reference internal" href="interface.html#process-ui"><span class="std std-ref">processing interface</span></a>. After the execution, <a class="reference internal" href="#step-report"><span class="std std-ref">reports</span></a> are generated
+and <a class="reference internal" href="#step-status"><span class="std std-ref">step statuses</span></a> are updated.
+Each step generates different outputs which can be exlored using dedicated <a class="reference internal" href="tools.html#tools"><span class="std std-ref">tools</span></a>.</p>
+<section id="processing-steps">
+<span id="step-execution"></span><h2>Processing steps<a class="headerlink" href="#processing-steps" title="Permalink to this headline"></a></h2>
+<section id="implantation-step">
+<span id="id2"></span><h3>Implantation step<a class="headerlink" href="#implantation-step" title="Permalink to this headline"></a></h3>
+<p>The implantation step is the very first step of the processing pipeline and the objective is
+to associate iEEG files found in the BIDS database with <a class="reference internal" href="prerequisites.html#implantation-files"><span class="std std-ref">implantation file(s)</span></a>.
+To do so, the implantation tab of the <a class="reference internal" href="interface.html#process-ui"><span class="std std-ref">processing interface</span></a> allows the user to filter the iEEG data
+found in the BIDS database and associate an implantation file.</p>
+<p>The implantation step will produce several output files found in the following directory:</p>
+<blockquote>
+<div><p><em>BIDS root/derivatives/ccep_manager/step_implantation/sub-&lt;id&gt;/ses-&lt;session&gt;/ieeg</em></p>
+</div></blockquote>
+<p>The outputs are <em>&lt;iEEG file&gt;_implantation.csv</em> files which are a copy of the original implantation files but reuse
+the name of the iEEG file they have been associated with as a prefix.</p>
+</section>
+<section id="preprocessing-step">
+<span id="id3"></span><h3>Preprocessing step<a class="headerlink" href="#preprocessing-step" title="Permalink to this headline"></a></h3>
+<p>The objective of the preprocessing step is to prepare the iEEG files for the rest of the pipeline.
+This step extracts electrode coordinates from the <a class="reference internal" href="prerequisites.html#implantation-files"><span class="std std-ref">implantation file</span></a>
+and parses the notes of the iEEG files to get the <a class="reference internal" href="prerequisites.html#event-notes"><span class="std std-ref">stimulation parameters</span></a>.
+The preprocessing tab in the <a class="reference internal" href="interface.html#process-ui"><span class="std std-ref">processing interface</span></a> lets the user specify a default <em>Pulse Width</em>,
+which will be used if it cannot be deduced from the notes.</p>
+<p>The preprocessing step uses the <em>&lt;iEEG file&gt;_implantation.csv</em> files generated during the <a class="reference internal" href="#implantation-step"><span class="std std-ref">implantation step</span></a> as
+inputs to identify and convert associated iEEG files into SPM objects.</p>
+<p>The output files are described in the <a class="reference internal" href="#preprocessing-outputs-table"><span class="std std-ref">table below</span></a> and are stored in the following directory:</p>
+<blockquote>
+<div><p><em>BIDS root/derivatives/ccep_manager/step_preprocessing/sub-&lt;id&gt;/ses-&lt;session&gt;/ieeg</em></p>
+</div></blockquote>
+<table class="docutils align-default" id="preprocessing-outputs-table">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>OUTPUT</p></th>
+<th class="head"><p>DESCRIPTION</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>&lt;iEEG file&gt;.dat</p></td>
+<td><p>SPM object. Voltage values.</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;iEEG file&gt;.mat</p></td>
+<td><p>SPM object. Header.</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;iEEG file&gt;_log.txt</p></td>
+<td><p>Log file of the conversion process.</p></td>
+</tr>
+<tr class="row-odd"><td><p>contactsunmatched_&lt;iEEG file&gt;.txt</p></td>
+<td><p>Log file containing the list of discarded channels.</p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><p><strong>Preprocessing step outputs.</strong> <em>List of output files produced by the preprocessing step. iEEG file is the name of the preprocessed i(EEG) file.</em></p>
+</div></blockquote>
+</section>
+<section id="cropping-step">
+<span id="id4"></span><h3>Cropping step<a class="headerlink" href="#cropping-step" title="Permalink to this headline"></a></h3>
+<p>The objective of the cropping step is to split iEEG files according to stimulation periods
+so the resulting output files contain a single stimulation.</p>
+<p>If applicable, the cropped stimulation will start -40s before the first stimulation pulse and end +1s after
+the last stimulation pulse.</p>
+<p>All time series found in the cropped stimulations
+are tested for bad channels using ensemble machine learning and classified either “good” or “bad”
+depending on multiple metrics detailed in Tuyusenge et al. (2018) (<a class="reference internal" href="references.html#tuyisenge-2018" id="id5"><span>[Tuyisenge_2018]</span></a>).</p>
+<p>The cropping tab in the <a class="reference internal" href="interface.html#process-ui"><span class="std std-ref">processing interface</span></a> allows to specify a particular stimulation to crop
+using its index (0 means all stimulations will be cropped).
+It is important to follow <a class="reference internal" href="prerequisites.html#event-notes"><span class="std std-ref">note labelling convention</span></a> to ensure a robust cropping procedure.</p>
+<p>The cropping step relies on the SPM objects generated during the <a class="reference internal" href="#preprocessing-step"><span class="std std-ref">preprocessing step</span></a>
+to detect stimulation events from the notes along with a threshold-based detection algorithm
+applied on time series (<a class="reference internal" href="references.html#trebaul-2018" id="id6"><span>[Trebaul_2018]</span></a>).</p>
+<p>The output files are described in the <a class="reference internal" href="#cropping-outputs-table"><span class="std std-ref">table below</span></a> and are stored in the following directory:</p>
+<blockquote>
+<div><p><em>BIDS root/derivatives/ccep_manager/step_cropping/sub-&lt;id&gt;/ses-&lt;session&gt;/ieeg</em></p>
+</div></blockquote>
+<table class="docutils align-default" id="cropping-outputs-table">
+<colgroup>
+<col style="width: 43%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>OUTPUT</p></th>
+<th class="head"><p>DESCRIPTION</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>&lt;iEEG&gt;_stimulations.tsv</p></td>
+<td><p>List of all cropped stimulations.</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;iEEG&gt;/…</p></td>
+<td><p>Folder reusing the name of the cropped iEEG file.</p></td>
+</tr>
+<tr class="row-even"><td><p>…/&lt;stimulation&gt;.mat</p></td>
+<td><p>SPM object. Header.</p></td>
+</tr>
+<tr class="row-odd"><td><p>…/&lt;stimulation&gt;.dat</p></td>
+<td><p>SPM object. Voltage values.</p></td>
+</tr>
+<tr class="row-even"><td><p>…/&lt;stimulation&gt;.csv</p></td>
+<td><p>Machine learning metrics.</p></td>
+</tr>
+<tr class="row-odd"><td><p>…/&lt;stimulation&gt;_bChans.txt</p></td>
+<td><p>Machine learning bad channels (indexes + labels).</p></td>
+</tr>
+<tr class="row-even"><td><p>…/&lt;stimulation&gt;_bIdx.txt</p></td>
+<td><p>Machine learning bad channels (indexes).</p></td>
+</tr>
+<tr class="row-odd"><td><p>…/recordings_monopolar_&lt;stimulation&gt;.txt</p></td>
+<td><p>List of monopolar channels in the cropped stimulation.</p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><p><strong>Cropping step outputs.</strong> <em>List of output files produced by the cropping step. &lt;iEEG&gt; is the name of the cropped iEEG file. &lt;stimulation&gt; is the name the cropped stimulation and is derived from the corresponding note.</em></p>
+</div></blockquote>
+<p>It is possible to visualize time series of cropped stimulations using <a class="reference internal" href="tools.html#time-series-visualization"><span class="std std-ref">AnyWave</span></a>
+and visualize mean responses (CCEP) in 3D using <a class="reference internal" href="tools.html#ccep-visualization"><span class="std std-ref">HiBoP</span></a>.</p>
+</section>
+<section id="quality-control">
+<span id="id7"></span><h3>Quality control<a class="headerlink" href="#quality-control" title="Permalink to this headline"></a></h3>
+<p>The objective of the quality control step is to review the results of the <a class="reference internal" href="#cropping-step"><span class="std std-ref">machine learning classification</span></a>
+and correct “good” and “bad” channels if necessary.</p>
+<p>This step is human dependent and it is possible to use <a class="reference internal" href="tools.html#time-series-visualization"><span class="std std-ref">AnyWave</span></a>
+to visualize the time series of cropped stimulations in order to review and validate bad channels.
+After a cropped stimulation has been validated
+the corresponding SPM object and all <a class="reference internal" href="#cropping-outputs-table"><span class="std std-ref">companions files</span></a> are updated.</p>
+<p>In practice, <a class="reference internal" href="prerequisites.html#anywave"><span class="std std-ref">AnyWave</span></a> is not mandatory and this step only requires to create
+a <em>&lt;stimulation&gt;_bIdxChecked.txt</em> file for each cropped stimulation containing the indexes of bad channels.
+The <em>&lt;stimulation&gt;_bIdxChecked.txt</em> files are thus very similar to the <em>&lt;stimulation&gt;_bIdx.txt</em> files
+generated during the <a class="reference internal" href="#cropping-step"><span class="std std-ref">cropping step</span></a>, except they are populated by the user instead of the classifier.</p>
+<p>The validation procedure performed via the <a class="reference internal" href="tools.html#time-series-visualization"><span class="std std-ref">time series tool</span></a> then uses the indexes found in the <em>&lt;stimulation&gt;_bIdxChecked.txt</em>
+(or the <em>&lt;stimulation&gt;_bIdx.txt</em> if the latter is empty) to update the output files of the <a class="reference internal" href="#cropping-step"><span class="std std-ref">cropping step</span></a>.</p>
+</section>
+<section id="features-step">
+<span id="id8"></span><h3>Features step<a class="headerlink" href="#features-step" title="Permalink to this headline"></a></h3>
+<p>The objective of the features step is to compute the mean response of cropped stimulations
+and extract <a class="reference internal" href="#ccep-features-table"><span class="std std-ref">features</span></a>. The features tab in the <a class="reference internal" href="interface.html#process-ui"><span class="std std-ref">processing interface</span></a>
+allows to specify a set of <a class="reference internal" href="#features-parameters-table"><span class="std std-ref">parameters</span></a> that will be used during the extraction of the features.</p>
+<p>The features step is actually an aggregate of multiple treatments whose technical aspects
+are described in Trebaul et al. (2018) (<a class="reference internal" href="references.html#trebaul-2018" id="id9"><span>[Trebaul_2018]</span></a>). Briefly, iEEG signals are
+re-referenced with a local bipolar montage between adjacent contacts of the same electrode to increase
+the spatial specificity of the effects. A stimulation artifact correction with a model-based method is then
+applied on single-trials to consider the first milliseconds after stimulation for the
+CCEP analysis (<a class="reference internal" href="references.html#trebaul-2016" id="id10"><span>[Trebaul_2016]</span></a>). Finally, the re-referenced signals are band-pass
+filtered between 1 and 45 Hz to best identify the CCEP components. CCEP are obtained using a robust-averaging
+method aiming at removing any possible spurious component due to non-stimulation triggered events,
+such as interictal epileptic spikes. Responses over pulses are averaged together,
+but excluding the trials showing a response energy 3 times higher than the median response
+energy over the whole stimulation run (<a class="reference internal" href="references.html#david-2013" id="id11"><span>[David_2013]</span></a>). After averaging,
+the CCEP on each channel is baseline-corrected and z-scored with respect to the same baseline.
+Z-scoring quantifies the signal-to-noise ratio on each channel,
+thereby allowing easy intra- and inter-patient statistics.
+The absolute value of the z-scored CCEP is used to identify the first significant component
+which is characterized extracting several <a class="reference internal" href="#ccep-features-table"><span class="std std-ref">features</span></a>.
+The features are extracted using several statistical thresholds ranging from z=1 to z=7.</p>
+<table class="docutils align-default" id="features-parameters-table">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>PARAMETER</p></th>
+<th class="head"><p>DESCRIPTION</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Interpolation start/end</p></td>
+<td><p>Time frame around each stimulation pulse used for artefact correction.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cutoff frequency</p></td>
+<td><p>Upper cutoff frequency of the band pass filter.</p></td>
+</tr>
+<tr class="row-even"><td><p>Minimum baseline</p></td>
+<td><p>Time before each pulse used for baseline computation.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Maximum response</p></td>
+<td><p>Time after each pulse used for response computation.</p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><p><strong>Features step parameters.</strong> <em>List of adjustable parameters accessible in the features tab of the</em> <a class="reference internal" href="interface.html#process-ui"><span class="std std-ref">processing interface</span></a> <em>.</em></p>
+</div></blockquote>
+<table class="docutils align-default" id="ccep-features-table">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 94%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>FEATURE</p></th>
+<th class="head"><p>DESCRIPTION</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Amplitude</p></td>
+<td><p>Amplitude of the first peak above the significance threshold.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Duration</p></td>
+<td><p>First time window with consecutive samples exceeding the significance threshold. If the Signal amplitude went down this threshold but stayed above a minimal threshold (z = 4) for less than 5ms, this signal part was still considered as significant.</p></td>
+</tr>
+<tr class="row-even"><td><p>Integral</p></td>
+<td><p>Signal integral computed over of the first significant time window.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Latency start</p></td>
+<td><p>Latency of the first sample with an amplitude exceeding the significance threshold.</p></td>
+</tr>
+<tr class="row-even"><td><p>Onset delay</p></td>
+<td><p>Latency of the deflection point preceding the first peak.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Peak delay</p></td>
+<td><p>Latency of the first peak above the significance threshold.</p></td>
+</tr>
+<tr class="row-even"><td><p>Probability</p></td>
+<td><p>Boolean indicating if the Amplitude was below (0) or over (1) the threshold.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Slope</p></td>
+<td><p>Response slope between latency start and peak delay.</p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><p><strong>CCEP features.</strong> <em>List of features extracted from CCEPs (</em> <a class="reference internal" href="references.html#trebaul-2018" id="id12"><span>[Trebaul_2018]</span></a> <em>).</em></p>
+</div></blockquote>
+<p>The features step processes the cropped stimulations generated during the <a class="reference internal" href="#cropping-step"><span class="std std-ref">cropping step</span></a> and extracts
+features from the averaged response.</p>
+<p>The <a class="reference internal" href="#features-outputs-table"><span class="std std-ref">outputs</span></a> and <a class="reference internal" href="#features-results-table"><span class="std std-ref">results</span></a> files are described in the tables below and are stored in the following directory:</p>
+<blockquote>
+<div><p><em>BIDS root/derivatives/ccep_manager/step_averaging/sub-&lt;id&gt;/ses-&lt;session&gt;/ieeg</em></p>
+</div></blockquote>
+<table class="docutils align-default" id="features-outputs-table">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 68%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>OUTPUT</p></th>
+<th class="head"><p>DESCRIPTION</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>&lt;iEEG&gt;_stimulations.tsv</p></td>
+<td><p>List of all cropped stimulations.</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;iEEG&gt;/…</p></td>
+<td><p>Folder reusing the name of the cropped iEEG file.</p></td>
+</tr>
+<tr class="row-even"><td><p>…/&lt;stimulation&gt;.dat</p></td>
+<td><p>SPM object. Voltage values.</p></td>
+</tr>
+<tr class="row-odd"><td><p>…/&lt;stimulation&gt;.mat</p></td>
+<td><p>SPM object. Header.</p></td>
+</tr>
+<tr class="row-even"><td><p>…/bp_&lt;stimulation&gt;_log.txt</p></td>
+<td><p>Log file of the bipolar montage process.</p></td>
+</tr>
+<tr class="row-odd"><td><p>…/recordings_bp_&lt;stimulation&gt;.txt</p></td>
+<td><p>List of bipolar channels.</p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><p><strong>Features step outputs.</strong> <em>List of output files produced by the features step. &lt;iEEG&gt; is the name of the cropped iEEG file. &lt;stimulation&gt; is the name the cropped stimulation and is derived from the corresponding note.</em></p>
+</div></blockquote>
+<table class="docutils align-default" id="features-results-table">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 76%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>PREFIX</p></th>
+<th class="head"><p>DESCRIPTION</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>*bp*</p></td>
+<td><p>Time series after bipolar montage.</p></td>
+</tr>
+<tr class="row-odd"><td><p>*artcorr*</p></td>
+<td><p>Time series after artefact correction.</p></td>
+</tr>
+<tr class="row-even"><td><p>*filter*</p></td>
+<td><p>Time series  after filtering.</p></td>
+</tr>
+<tr class="row-odd"><td><p>*avg*</p></td>
+<td><p>Time series after response averaging.</p></td>
+</tr>
+<tr class="row-even"><td><p>*str*</p></td>
+<td><p>Time series after standard deviation computation.</p></td>
+</tr>
+<tr class="row-odd"><td><p>*zavg*</p></td>
+<td><p>Time series after response averaging and z-transformation.</p></td>
+</tr>
+<tr class="row-even"><td><p>*duration*</p></td>
+<td><p>Duration scores.</p></td>
+</tr>
+<tr class="row-odd"><td><p>*integral*</p></td>
+<td><p>Integral scores.</p></td>
+</tr>
+<tr class="row-even"><td><p>*latencystart*</p></td>
+<td><p>Latency start scores.</p></td>
+</tr>
+<tr class="row-odd"><td><p>*onsetdelay*</p></td>
+<td><p>Onset delay scores.</p></td>
+</tr>
+<tr class="row-even"><td><p>*peakdelay*</p></td>
+<td><p>Peak delay scores.</p></td>
+</tr>
+<tr class="row-odd"><td><p>*prob*</p></td>
+<td><p>Probability scores.</p></td>
+</tr>
+<tr class="row-even"><td><p>*slope*</p></td>
+<td><p>Slope score.</p></td>
+</tr>
+<tr class="row-odd"><td><p>*ampl*</p></td>
+<td><p>Amplitude scores.</p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><p><strong>Features step results.</strong> <em>List of prefixes used as naming convention for result files produced by the features step. Prefixes stack as the file is processed.</em></p>
+</div></blockquote>
+<p>It is possible to extract the features stored in the SPM objects into plain text files using the <a class="reference internal" href="tools.html#feature-tables"><span class="std std-ref">dedicated tool</span></a> .</p>
+</section>
+</section>
+<section id="step-information">
+<h2>Step information<a class="headerlink" href="#step-information" title="Permalink to this headline"></a></h2>
+<section id="step-status">
+<span id="id13"></span><h3>Step status<a class="headerlink" href="#step-status" title="Permalink to this headline"></a></h3>
+<p>The general status of a step is directly visible in the <a class="reference internal" href="interface.html#panels-ui"><span class="std std-ref">interactive table</span></a>
+and described in the <a class="reference internal" href="#general-status-table"><span class="std std-ref">table</span></a> below.
+It is also possible to <a class="reference internal" href="interface.html#details-ui"><span class="std std-ref">explore step(s)</span></a> and access more detailed information.</p>
+<p>In the current iteration of CCEP Manager, statuses are not automatically updated and the <a class="reference internal" href="interface.html#panels-ui"><span class="std std-ref">interactive table</span></a> needs
+to be <a class="reference internal" href="interface.html#bids-ui"><span class="std std-ref">refreshed</span></a> after
+<a class="reference internal" href="#processing-data"><span class="std std-ref">processing data</span></a> or <a class="reference internal" href="#quality-control"><span class="std std-ref">validating cropped stimulations</span></a>.</p>
+<table class="docutils align-default" id="general-status-table">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 78%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>GENERAL STATUS</p></th>
+<th class="head"><p>DESCRIPTION</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>MISSING</p></td>
+<td><p>Data associated with the step cannot be found.</p></td>
+</tr>
+<tr class="row-odd"><td><p>NOT READY</p></td>
+<td><p>Data associated with the step is incomplete.</p></td>
+</tr>
+<tr class="row-even"><td><p>READY</p></td>
+<td><p>Data associated with the step is complete.</p></td>
+</tr>
+<tr class="row-odd"><td><p>OUTDATED</p></td>
+<td><p>Step execution is older than the previous step last execution.</p></td>
+</tr>
+<tr class="row-even"><td><p>ERROR</p></td>
+<td><p>Unexpected status.</p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><p><strong>General step status.</strong> <em>Possible statuses of a step.</em></p>
+</div></blockquote>
+</section>
+<section id="step-report">
+<span id="id14"></span><h3>Step report<a class="headerlink" href="#step-report" title="Permalink to this headline"></a></h3>
+<p>Executing a step will generate a report in the corresponding derivative directory.
+The report is a <em>*.json</em> file using the following naming convention.</p>
+<blockquote>
+<div><p><em>sub-&lt;id&gt;_&lt;step&gt;_&lt;timestamp&gt;_execution_report.json.</em></p>
+<ul class="simple">
+<li><p>&lt;id&gt; is the subject identifier.</p></li>
+<li><p>&lt;step&gt; is the step name (csv, preprocessing, cropping, averaging).</p></li>
+<li><p>&lt;timestamp&gt; is a 10-digit timestamp</p></li>
+</ul>
+</div></blockquote>
+<p>The report file contains information regarding the step and its execution as described in the <a class="reference internal" href="#report-table"><span class="std std-ref">table below</span></a>.
+It is also possible to display, clean and save the content of the <a class="reference internal" href="interface.html#process-ui"><span class="std std-ref">console</span></a>,
+which show execution logs as the data is being processed.</p>
+<table class="docutils align-default" id="report-table">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>REPORT</p></th>
+<th class="head"><p>DESCRIPTION</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>subject</p></td>
+<td><p>Subject ID.</p></td>
+</tr>
+<tr class="row-odd"><td><p>step</p></td>
+<td><p>Step name.</p></td>
+</tr>
+<tr class="row-even"><td><p>date</p></td>
+<td><p>Execution date.</p></td>
+</tr>
+<tr class="row-odd"><td><p>args</p></td>
+<td><p>Arguments of the command line.</p></td>
+</tr>
+<tr class="row-even"><td><p>Input</p></td>
+<td><p>Input directory.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Output</p></td>
+<td><p>Output directory.</p></td>
+</tr>
+<tr class="row-even"><td><p>Status</p></td>
+<td><p>Execution status.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Stdout</p></td>
+<td><p>Standard stream output.</p></td>
+</tr>
+<tr class="row-even"><td><p>stderr</p></td>
+<td><p>Standard stream error.</p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><p><strong>Execution report.</strong> <em>Entries found in the report automatically created after executing a processing step.</em></p>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="interface.html" class="btn btn-neutral float-left" title="User interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="atlases.html" class="btn btn-neutral float-right" title="Atlases (EMPTY)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Anthony Boyer.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick start &mdash; CCEP Manager 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Prerequisites" href="prerequisites.html" />
+    <link rel="prev" title="CCEP Manager’s documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> CCEP Manager
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quick start</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#before-you-start">Before you start</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prepare-your-working-environment">Prepare your working environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prepare-your-data">Prepare your data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#data-processing">Data processing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setting-things-up">Setting things up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#define-a-processing-pipeline">Define a processing pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configure-and-execute-processing-steps">Configure and execute processing steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#perform-quality-control">Perform quality control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extract-ccep-features">Extract CCEP features</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#results-and-visualizations">Results and visualizations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface.html">User interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="process.html">Processing data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="atlases.html">Atlases (EMPTY)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting (EMPTY)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limitationsandperspectives.html">Limitations and perspectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments (EMPTY)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hip.html">CCEP Manager in the HIP (EMPTY)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials (EMPTY)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CCEP Manager</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Quick start</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/quick_start.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="quick-start">
+<span id="id1"></span><h1>Quick start<a class="headerlink" href="#quick-start" title="Permalink to this headline"></a></h1>
+<p>CCEP Manager is a BIDS app allowing the processing of iEEG data coupled with electrical stimulation
+for the extraction of CCEP features and the generation of connectivity atlases.</p>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="_images/cpman_main.png"><img alt="_images/cpman_main.png" src="_images/cpman_main.png" style="width: 1000px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>CCEP Manager.</strong> <em>Main inferface.</em></span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="before-you-start">
+<h2>Before you start<a class="headerlink" href="#before-you-start" title="Permalink to this headline"></a></h2>
+<section id="prepare-your-working-environment">
+<h3>Prepare your working environment<a class="headerlink" href="#prepare-your-working-environment" title="Permalink to this headline"></a></h3>
+<p>CCEP Manager requires <a class="reference internal" href="prerequisites.html#matlab-runtime"><span class="std std-ref">MatLab 2015b Runtime (9.0)</span></a> as it is used for
+data processing, whereas <a class="reference internal" href="prerequisites.html#anywave"><span class="std std-ref">AnyWave</span></a> and <a class="reference internal" href="prerequisites.html#hibop"><span class="std std-ref">HiBoP</span></a> softwares are optional
+but recommended for data visualization and reviewing.</p>
+</section>
+<section id="prepare-your-data">
+<h3>Prepare your data<a class="headerlink" href="#prepare-your-data" title="Permalink to this headline"></a></h3>
+<p>CCEP Manager is a BIDS app and only works on a valid <a class="reference internal" href="prerequisites.html#bids-database"><span class="std std-ref">BIDS database</span></a> as it uses BIDS directory tree
+and file naming conventions to gather inputs and generate outputs in adequate derivative folders.
+Accordingly, iEEG data should either be in <em>BrainVision format</em> or <em>European Data Format</em>.</p>
+<p>Stimulation events in iEEG files should use the following <a class="reference internal" href="prerequisites.html#event-notes"><span class="std std-ref">labelling convention</span></a> :</p>
+<blockquote>
+<div><p><em>&lt;label1&gt; &lt;label2&gt; &lt;intensity&gt; mA &lt;frequency&gt; Hz &lt;pulse width&gt; us</em></p>
+<p><em>(e.g.: Bp02 Bp03 3mA 1Hz 1000us)</em></p>
+</div></blockquote>
+<p>iEEG data need to be paired with <a class="reference internal" href="prerequisites.html#implantation-files"><span class="std std-ref">implantation file(s)</span></a> that specify electrode coordinates
+and corresponding cortical parcels. Implantation file(s) should be prepared using the <a class="reference internal" href="prerequisites.html#intranat"><span class="std std-ref">IntrAnat software</span></a>.</p>
+</section>
+</section>
+<section id="data-processing">
+<h2>Data processing<a class="headerlink" href="#data-processing" title="Permalink to this headline"></a></h2>
+<p>The processing pipeline consists in 4 sequential steps:</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="process.html#implantation-step"><span class="std std-ref">Implantation step</span></a></p></li>
+<li><p><a class="reference internal" href="process.html#preprocessing-step"><span class="std std-ref">Preprocessing step</span></a></p></li>
+<li><p><a class="reference internal" href="process.html#cropping-step"><span class="std std-ref">Cropping step</span></a></p></li>
+<li><p><a class="reference internal" href="process.html#features-step"><span class="std std-ref">Features step</span></a></p></li>
+</ol>
+<p>Each step produces substantially different outputs which can be explored using various <a class="reference internal" href="tools.html#tools"><span class="std std-ref">tools</span></a>.
+The last <a class="reference internal" href="process.html#features-step"><span class="std std-ref">features step</span></a>, allows the computation of <a class="reference internal" href="atlases.html#atlases"><span class="std std-ref">connectivity atlases</span></a>.</p>
+<section id="setting-things-up">
+<h3>Setting things up<a class="headerlink" href="#setting-things-up" title="Permalink to this headline"></a></h3>
+<p>Start CCEP Manager double clicking the executable file and specify dependencies for your system once for all clicking <a class="reference internal" href="_images/parameters_20_100x100.png"><img alt="parameters button" src="_images/parameters_20_100x100.png" style="width: 25px;" /></a>
+and selecting the <em>DEPENDENCIES</em> option (<a class="reference internal" href="_images/dependencies_20_100x100.png"><img alt="dependencies button" src="_images/dependencies_20_100x100.png" style="width: 25px;" /></a>).
+A popup will appear allowing to specify (<a class="reference internal" href="_images/open_20_100x100.png"><img alt="open button" src="_images/open_20_100x100.png" style="width: 25px;" /></a>) the paths of both <a class="reference internal" href="prerequisites.html#anywave"><span class="std std-ref">AnyWave</span></a> and <a class="reference internal" href="prerequisites.html#hibop"><span class="std std-ref">HiBoP</span></a> executable files.
+Don’t forget to save modifications clicking <a class="reference internal" href="_images/save_20_100x100.png"><img alt="save button" src="_images/save_20_100x100.png" style="width: 25px;" /></a> before closing the popup.</p>
+<figure class="align-default" id="id3">
+<span id="ui-dependencies"></span><a class="reference internal image-reference" href="_images/cpman_dependencies.png"><img alt="_images/cpman_dependencies.png" src="_images/cpman_dependencies.png" style="width: 1000px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>Specify dependencies.</strong> <em>Specify the paths to</em> <a class="reference internal" href="prerequisites.html#anywave"><span class="std std-ref">AnyWave</span></a> <em>and</em> <a class="reference internal" href="prerequisites.html#hibop"><span class="std std-ref">HiBoP</span></a> <em>on your system.</em></span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Then, specify the active BIDS database by browsing (<a class="reference internal" href="_images/open_20_100x100.png"><img alt="open button" src="_images/open_20_100x100.png" style="width: 25px;" /></a>) and selecting the root directory of the appropriate BIDS database.</p>
+<figure class="align-center" id="id4">
+<span id="ui-open"></span><a class="reference internal image-reference" href="_images/cpman_bids.png"><img alt="_images/cpman_bids.png" src="_images/cpman_bids.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>Specify a BIDS database.</strong> <em>Specify the path to the</em> <a class="reference internal" href="prerequisites.html#bids-database"><span class="std std-ref">BIDS database</span></a> <em>.</em></span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Once a valid BIDS database is selected the interface will update showing the list of subjects
+and the status of each processing step in the form of an <a class="reference internal" href="#ui-table"><span class="std std-ref">interactive table</span></a>.</p>
+<figure class="align-default" id="id5">
+<span id="ui-table"></span><a class="reference internal image-reference" href="_images/cpman_table.png"><img alt="_images/cpman_table.png" src="_images/cpman_table.png" style="width: 1000px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>Interactive table.</strong> <em>The table shows, for each patient, the status of each step forming the processing pipeline.</em></span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="define-a-processing-pipeline">
+<h3>Define a processing pipeline<a class="headerlink" href="#define-a-processing-pipeline" title="Permalink to this headline"></a></h3>
+<p>Cells from the <a class="reference internal" href="#ui-table"><span class="std std-ref">interactive table</span></a> are selectable and a number of contextual actions can be performed
+on the active selection. Select the first 3 steps of a subject who has the iEEG data you would like
+to process and for which the corresponding <a class="reference internal" href="prerequisites.html#implantation-files"><span class="std std-ref">implantation file(s)</span></a> have been prepared.
+Then, right click the table and select the <em>RUN</em> option (<a class="reference internal" href="_images/pipeline_20_100x100.png"><img alt="pipeline button" src="_images/pipeline_20_100x100.png" style="width: 25px;" /></a>) from the contextual menu to spawn the <a class="reference external" href="data:ref">data:ref</a>:<cite>processing interface&lt;Process UI&gt;</cite>.</p>
+<figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="_images/cpman_pipeline.png"><img alt="_images/cpman_pipeline.png" src="_images/cpman_pipeline.png" style="width: 1000px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>Prepare a pipeline.</strong> <em>Right click the table after selecting processing steps (cells) to access contextual options.</em></span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="configure-and-execute-processing-steps">
+<h3>Configure and execute processing steps<a class="headerlink" href="#configure-and-execute-processing-steps" title="Permalink to this headline"></a></h3>
+<p>The <a class="reference internal" href="#ui-configure"><span class="std std-ref">data processing interface</span></a> lets you configure the steps you have previously chosen in
+the <a class="reference internal" href="#ui-table"><span class="std std-ref">interactive table</span></a>.
+Selecting a subject allows to configure the step parameters in the corresponding tab.</p>
+<figure class="align-default" id="id7">
+<span id="ui-configure"></span><a class="reference internal image-reference" href="_images/cpman_configure.png"><img alt="_images/cpman_configure.png" src="_images/cpman_configure.png" style="width: 1000px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>Data processing interface.</strong> <em>It is possible to configure each step separately
+in the corresponding tab after selecting a subject in the list.</em></span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The <a class="reference internal" href="#ui-implantation"><span class="std std-ref">implantation step parameters</span></a> propose various drop down lists,
+corresponding to <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/99-appendices/04-entity-table.html">BIDS iEEG entities</a>,
+(key-value pairs) in order to filter the iEEG data to process from the BIDS database.
+Click on the <em>Implantation file</em> button to browse and select
+the <a class="reference internal" href="prerequisites.html#implantation-files"><span class="std std-ref">implantation file</span></a> (*.csv) that will be matched with the filtered iEEG data.</p>
+<figure class="align-default" id="id8">
+<span id="ui-implantation"></span><a class="reference internal image-reference" href="_images/cpman_implantation.png"><img alt="_images/cpman_implantation.png" src="_images/cpman_implantation.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>Implantation step parameters.</strong> <em>Filter the iEEG data from the BIDS database
+and match them with a carefully crafted</em> <a class="reference internal" href="prerequisites.html#implantation-files"><span class="std std-ref">implantation file</span></a> <em>.</em></span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>To configure the other steps, please refer to CCEP Manager full documentation which contain in-depth
+description of the <a class="reference internal" href="process.html#processing-data"><span class="std std-ref">processing steps</span></a> and associated parameters.
+If you are unsure, keep the default values.</p>
+<p>Clicking <em>RUN</em> (<a class="reference internal" href="_images/run_20_100x100.png"><img alt="run button" src="_images/run_20_100x100.png" style="width: 25px;" /></a>) will execute the pipeline. Processing logs will be display in real-time in the <em>REPORT</em> area.
+In the meantime, it is possible to define an other pipeline and process data following the same approach.</p>
+</section>
+<section id="perform-quality-control">
+<h3>Perform quality control<a class="headerlink" href="#perform-quality-control" title="Permalink to this headline"></a></h3>
+<p>Once data processing is over, click <a class="reference internal" href="_images/refresh_20_100x100.png"><img alt="refresh button" src="_images/refresh_20_100x100.png" style="width: 25px;" /></a> to refresh the table.</p>
+<figure class="align-default" id="id9">
+<span id="ui-refresh"></span><a class="reference internal image-reference" href="_images/cpman_refresh.png"><img alt="_images/cpman_refresh.png" src="_images/cpman_refresh.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>Refresh button.</strong> <em>Parses the BIDS database to update the</em> <a class="reference internal" href="#ui-table"><span class="std std-ref">interactive table</span></a> <em>.</em></span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>At this point, stimulation periods in iEEG files have been detected and cropped into individual files.
+However, the <a class="reference internal" href="process.html#cropping-step"><span class="std std-ref">cropping step</span></a> is <a class="reference internal" href="_images/notready.png"><img alt="notready status" src="_images/notready.png" style="width: 150px;" /></a> because the cropped stimulations need to be
+qualitatively controlled and validated first.</p>
+<p>Select the <a class="reference internal" href="process.html#cropping-step"><span class="std std-ref">cropping step</span></a> and then the <em>TIME SERIES</em> option (<a class="reference internal" href="_images/timeseries_20_100x100.png"><img alt="timeseries tool" src="_images/timeseries_20_100x100.png" style="width: 25px;" /></a>)
+after clicking <a class="reference internal" href="_images/wrench_20_100x100.png"><img alt="wrench button" src="_images/wrench_20_100x100.png" style="width: 25px;" /></a>.</p>
+<figure class="align-default" id="id10">
+<span id="ui-timeseries"></span><a class="reference internal image-reference" href="_images/cpman_timeseries.png"><img alt="_images/cpman_timeseries.png" src="_images/cpman_timeseries.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>Visualize time series.</strong> <em>It is possible to visualize time series for
+the</em> <a class="reference internal" href="process.html#preprocessing-step"><span class="std std-ref">preprocessing</span></a> <em>or</em> <a class="reference internal" href="process.html#cropping-step"><span class="std std-ref">cropping</span></a> <em>steps using</em> <a class="reference internal" href="prerequisites.html#anywave"><span class="std std-ref">AnyWave</span></a>.</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The popup <a class="reference internal" href="#ui-validate"><span class="std std-ref">illustrated below</span></a> allows the selection of one or multiple cropped
+stimulations to <em>DISPLAY</em> (<a class="reference internal" href="_images/anywave_20_100x100.png"><img alt="anywave software" src="_images/anywave_20_100x100.png" style="width: 25px;" /></a>) in <a class="reference internal" href="prerequisites.html#anywave"><span class="std std-ref">AnyWave</span></a>.</p>
+<figure class="align-default" id="id11">
+<span id="ui-validate"></span><a class="reference internal image-reference" href="_images/cpman_validate.png"><img alt="_images/cpman_validate.png" src="_images/cpman_validate.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>Display and validate cropped stimulation.</strong> <em>Select files to display in</em> <a class="reference internal" href="prerequisites.html#anywave"><span class="std std-ref">AnyWave</span></a> <em>and validate bad channels.</em></span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>In <a class="reference internal" href="prerequisites.html#anywave"><span class="std std-ref">AnyWave</span></a>, you can edit the montage and specify bad channels as <a class="reference internal" href="#ui-anywave"><span class="std std-ref">illustrated below</span></a>.</p>
+<figure class="align-default" id="id12">
+<span id="ui-anywave"></span><a class="reference internal image-reference" href="_images/cpman_anywave.png"><img alt="_images/cpman_anywave.png" src="_images/cpman_anywave.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>Specify bad channels.</strong> <em>Use</em> <a class="reference internal" href="prerequisites.html#anywave"><span class="std std-ref">AnyWave</span></a> <em>to edit the montage and specify bad channels before validating a cropped stimulation.</em></span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Once a cropped stimulation has been carefully reviewed in <a class="reference internal" href="prerequisites.html#anywave"><span class="std std-ref">AnyWave</span></a>, <em>VALIDATE</em> it
+clicking <a class="reference internal" href="_images/validate_20_100x100.png"><img alt="valdiate button" src="_images/validate_20_100x100.png" style="width: 25px;" /></a>.
+Once all the cropped stimulations are validated, <a class="reference internal" href="#ui-refresh"><span class="std std-ref">refresh</span></a> (<a class="reference internal" href="_images/refresh_20_100x100.png"><img alt="refresh button" src="_images/refresh_20_100x100.png" style="width: 25px;" /></a>) the interactive table so statuses are updated
+and the <a class="reference internal" href="process.html#cropping-step"><span class="std std-ref">cropping step</span></a> shows as <a class="reference internal" href="_images/ready.png"><img alt="ready status" src="_images/ready.png" style="width: 125px;" /></a>, meaning it is ready for CCEP computation and feature extraction.</p>
+</section>
+<section id="extract-ccep-features">
+<h3>Extract CCEP features<a class="headerlink" href="#extract-ccep-features" title="Permalink to this headline"></a></h3>
+<p>Once the cropped stimulations have been qualitatively controlled and validated, the <a class="reference internal" href="process.html#cropping-step"><span class="std std-ref">cropping step</span></a> is <a class="reference internal" href="_images/ready.png"><img alt="ready status" src="_images/ready.png" style="width: 125px;" /></a>.
+It is possible to execute the <a class="reference internal" href="process.html#features-step"><span class="std std-ref">features step</span></a> which will extract CCEPs features.
+Following the same procedure as before, click the features step in the table,
+then select the <em>RUN</em> option (<a class="reference internal" href="_images/pipeline_20_100x100.png"><img alt="pipeline button" src="_images/pipeline_20_100x100.png" style="width: 25px;" /></a>) from the contextual menu (right click) to initiate the <a class="reference internal" href="#ui-configure"><span class="std std-ref">data processing interface</span></a>.
+From there, it is possible to configure the step in the corresonding tab and execute the one-step pipeline
+clicking the <em>RUN</em> button (<a class="reference internal" href="_images/run_20_100x100.png"><img alt="run button" src="_images/run_20_100x100.png" style="width: 25px;" /></a>).</p>
+</section>
+</section>
+<section id="results-and-visualizations">
+<h2>Results and visualizations<a class="headerlink" href="#results-and-visualizations" title="Permalink to this headline"></a></h2>
+<p>Each processing step generates output files (mostly MATLAB/SPM object files) stored in the <em>/derivatives/ccep_manager</em>
+directory of the active BIDS database.
+Please refer to the <a class="reference internal" href="process.html#processing-data"><span class="std std-ref">data processing chapter</span></a> for the exact location and detailed description
+of the output files.</p>
+<p>You can access several <a class="reference internal" href="tools.html#tools"><span class="std std-ref">tools</span></a> by clicking <a class="reference internal" href="_images/wrench_20_100x100.png"><img alt="wrench button" src="_images/wrench_20_100x100.png" style="width: 25px;" /></a>, which is available for each processing step:</p>
+<ul class="simple">
+<li><p>The <a class="reference internal" href="tools.html#time-series-visualization"><span class="std std-ref">TIME SERIES</span></a> tool (<a class="reference internal" href="_images/timeseries_20_100x100.png"><img alt="timeseries tool" src="_images/timeseries_20_100x100.png" style="width: 25px;" /></a>) is accessible for both the <a class="reference internal" href="process.html#preprocessing-step"><span class="std std-ref">preprocessing</span></a>
+and <a class="reference internal" href="process.html#cropping-step"><span class="std std-ref">cropping</span></a> steps.
+An interface allows the selection of one or several preprocessed iEEG file or
+cropped stimulations to be displayed in <a class="reference internal" href="prerequisites.html#anywave"><span class="std std-ref">AnyWave</span></a>.</p></li>
+</ul>
+<ul class="simple">
+<li><p>The <a class="reference internal" href="tools.html#ccep-visualization"><span class="std std-ref">CCEP</span></a> tool (<a class="reference internal" href="_images/ccep_20_100x100.png"><img alt="ccep tool" src="_images/ccep_20_100x100.png" style="width: 25px;" /></a>) is only accessible for the <a class="reference internal" href="process.html#cropping-step"><span class="std std-ref">cropping step</span></a>.
+The cropped stimulations will be assigned to an HiBoP project that will be automatically loaded
+in the <a class="reference internal" href="prerequisites.html#hibop"><span class="std std-ref">HiBoP</span></a> software in order to visualize CCEPs in 3D.</p></li>
+</ul>
+<ul class="simple">
+<li><p>The <a class="reference internal" href="tools.html#feature-tables"><span class="std std-ref">FEATURES</span></a> tool (<a class="reference internal" href="_images/features_20_100x100.png"><img alt="features tool" src="_images/features_20_100x100.png" style="width: 25px;" /></a>) is only accessible for the <a class="reference internal" href="process.html#features-step"><span class="std std-ref">features step</span></a>.
+It can be used to store the various scores extracted from CCEP features into convenient text (*.txt) files.</p></li>
+</ul>
+<ul class="simple">
+<li><p>The <a class="reference internal" href="tools.html#feature-tables"><span class="std std-ref">ATLAS</span></a> tool (<a class="reference internal" href="_images/atlas_20_100x100.png"><img alt="atlas tool" src="_images/atlas_20_100x100.png" style="width: 25px;" /></a>) is only accessible for the <a class="reference internal" href="process.html#features-step"><span class="std std-ref">features step</span></a>.
+It can be used to generate <a class="reference internal" href="atlases.html#atlases"><span class="std std-ref">connectivity atlases</span></a> computed from CCEP features.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="CCEP Manager’s documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="prerequisites.html" class="btn btn-neutral float-right" title="Prerequisites" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Anthony Boyer.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

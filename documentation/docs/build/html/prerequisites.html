@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prerequisites &mdash; CCEP Manager 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="User interface" href="interface.html" />
+    <link rel="prev" title="Quick start" href="quick_start.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> CCEP Manager
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick start</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Prerequisites</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#matlab-runtime">MATLAB Runtime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#optional">Optional</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#anywave">AnyWave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hibop">HiBoP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#intranat">IntrAnat</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#preparing-the-data">Preparing the data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bids-database">BIDS database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#required-data">Required data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compatible-formats">Compatible formats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ieeg-notes">iEEG notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#implantation-file">Implantation file</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interface.html">User interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="process.html">Processing data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="atlases.html">Atlases (EMPTY)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting (EMPTY)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limitationsandperspectives.html">Limitations and perspectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments (EMPTY)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hip.html">CCEP Manager in the HIP (EMPTY)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials (EMPTY)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CCEP Manager</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Prerequisites</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/prerequisites.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="prerequisites">
+<span id="id1"></span><h1>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline"></a></h1>
+<p>CCEP Manager has <a class="reference internal" href="#dependencies"><span class="std std-ref">dependencies</span></a> to external softwares and libraries which are detailed in this chapter.
+Briefly, <a class="reference internal" href="#matlab-runtime"><span class="std std-ref">MatLab 2015b Runtime</span></a> is mandatory as it is used for data processing,
+whereas <a class="reference internal" href="#anywave"><span class="std std-ref">AnyWave</span></a> and <a class="reference internal" href="#hibop"><span class="std std-ref">HiBoP</span></a> softwares are optional but advised for data visualization and reviewing.</p>
+<p>CCEP Manager is a BIDS app and can only work on a valid <a class="reference internal" href="#bids-database"><span class="std std-ref">BIDS database</span></a> using <a class="reference internal" href="#file-formats"><span class="std std-ref">compatible file
+formats</span></a>.
+i(EEG) data has to be <a class="reference internal" href="#prepare-data"><span class="std std-ref">prepared</span></a> according to BIDS guidelines <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable">(bids-specification.readthedocs.io)</a>.
+Notably, <a class="reference internal" href="#event-notes"><span class="std std-ref">stimulation notes</span></a> have to be cleaned up and <a class="reference internal" href="#implantation-files"><span class="std std-ref">implantation files</span></a> have to be
+carefully crafted before executing the processing pipeline using the <a class="reference internal" href="#intranat"><span class="std std-ref">IntrAnat</span></a> software..
+CCEP Manager and all its dependencies are available for Windows and Linux.</p>
+<section id="dependencies">
+<span id="id2"></span><h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline"></a></h2>
+<section id="matlab-runtime">
+<span id="id3"></span><h3>MATLAB Runtime<a class="headerlink" href="#matlab-runtime" title="Permalink to this headline"></a></h3>
+<p>CCEP Manager requires MATLAB Runtime R2015b (9.0) to be installed (<a class="reference internal" href="references.html#matlab-2015" id="id4"><span>[MATLAB_2015]</span></a>).
+The MATLAB Runtime is free to use and can be downloaded from the <a class="reference external" href="https://mathworks.com/products/compiler/matlab-runtime.html">MathWorks website</a>.</p>
+</section>
+<section id="optional">
+<h3>Optional<a class="headerlink" href="#optional" title="Permalink to this headline"></a></h3>
+<p>CCEP Manager should be associated with other software, namely <a class="reference internal" href="#anywave"><span class="std std-ref">AnyWave</span></a> and <a class="reference internal" href="#hibop"><span class="std std-ref">HiBoP</span></a>, for optimal usage.
+The paths to these software have to be specified once using the dependencies button accessible in the <a class="reference internal" href="interface.html#parameters-ui"><span class="std std-ref">parameters menu</span></a>.</p>
+<section id="anywave">
+<span id="id5"></span><h4>AnyWave<a class="headerlink" href="#anywave" title="Permalink to this headline"></a></h4>
+<p>AnyWave (<a class="reference internal" href="references.html#colombet-2015" id="id6"><span>[Colombet_2015]</span></a>) is a software designed to easily open and view data recorded by EEG or MEG acquisition
+systems. AnyWave can be associated with the CCEP Manager for the visualization of time series as well as the
+specification of bad channels (see <a class="reference internal" href="tools.html#time-series-visualization"><span class="std std-ref">time series visualization</span></a> and <a class="reference internal" href="process.html#quality-control"><span class="std std-ref">quality control</span></a>). AnyWave is available on Windows OS, macOS and Linux, is free to use,
+and can be downloaded from the <a class="reference external" href="https://meg.univ-amu.fr/wiki/AnyWave:Download">Marseille MEG platform wiki</a>.
+Additional documentation can be found in the dedicated <a class="reference external" href="https://gitlab-dynamap.timone.univ-amu.fr/anywave/anywave/-/wikis/home">GitLab webpage</a>.</p>
+</section>
+<section id="hibop">
+<span id="id7"></span><h4>HiBoP<a class="headerlink" href="#hibop" title="Permalink to this headline"></a></h4>
+<p>HiBoP is a software dedicated to the visualization of intracranial brain recordings such as intracranial
+electroencephalography (iEEG), Cortico-Cortical Evoked Potentials (CCEP) and functional magnetic resonance imaging (fMRI).
+HiBoP can be associated with CCEP Manager for the 3D visualization of CCEPs (see <a class="reference internal" href="tools.html#ccep-visualization"><span class="std std-ref">CCEP visualization</span></a>).
+HiBoP is freely available on Windows OS, macOS and Linux, and can be downloaded from the dedicated
+<a class="reference external" href="https://github.com/hbp-HiBoP/HiBoP">GitHub webpage</a>, which also hosts the documentation.</p>
+</section>
+<section id="intranat">
+<span id="id8"></span><h4>IntrAnat<a class="headerlink" href="#intranat" title="Permalink to this headline"></a></h4>
+<p>IntrAnat (<a class="reference internal" href="references.html#deman-2018" id="id9"><span>[Deman_2018]</span></a>) is a software used to perform virtual electrode implantation in patients’ neuroanatomy
+and to overlay results of epileptic and functional mapping as well as resection masks from the surgery.
+IntrAnat should be used to generate <a class="reference internal" href="#implantation-files"><span class="std std-ref">implantation files</span></a>
+that store electrode coordinates with corresponding cortical parcels
+and are used during the <a class="reference internal" href="process.html#implantation-step"><span class="std std-ref">implantation step</span></a>.</p>
+<p>IntrAnat is available on Linux for free and can be downloaded from the dedicated
+<a class="reference external" href="https://github.com/IntrAnatSEEGSoftware/IntrAnat">IntrAnat GitHub webpage</a>, which also hosts the installation instructions
+and documentation.</p>
+<p>IntrAnat now proposes accessibility options to ease the importation of imaging data from a BIDS database
+and a feature to export generated implantation files in suitable BIDS derivative folders.</p>
+</section>
+</section>
+</section>
+<section id="preparing-the-data">
+<span id="prepare-data"></span><h2>Preparing the data<a class="headerlink" href="#preparing-the-data" title="Permalink to this headline"></a></h2>
+<section id="bids-database">
+<span id="id10"></span><h3>BIDS database<a class="headerlink" href="#bids-database" title="Permalink to this headline"></a></h3>
+<p>The Brain Imaging Data structure (BIDS) is a standard to organize and describe neuroimaging, neurophysiology
+and behavioral data. It is widely used as it facilitates data sharing and analysis (<a class="reference internal" href="references.html#gorgolewski-2016" id="id11"><span>[Gorgolewski_2016]</span></a>).</p>
+<p>CCEP Manager is a BIDS App and can only work on a valid BIDS database as it uses BIDS directory tree and file naming
+conventions to gather inputs and generate outputs in adequate derivative folders.
+More information related to BIDS standard can be found on the dedicated website <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable">(bids-specification.readthedocs.io)</a>.</p>
+<p>In addition, a tool purposely made for the creation, validation and maintenance of BIDS databases,
+BIDS Manager (<a class="reference internal" href="references.html#roehri-2021" id="id13"><span>[Roehri_2021]</span></a>), is available on <a class="reference external" href="https://github.com/Dynamap/BIDS_Manager">GitHub</a> with associated documentation.</p>
+</section>
+<section id="required-data">
+<h3>Required data<a class="headerlink" href="#required-data" title="Permalink to this headline"></a></h3>
+<p>CCEP Manager is primarily designed for the extraction and characterization of CCEPs.
+It only requires iEEG data coupled with electrical stimulation and associated <a class="reference internal" href="#implantation-files"><span class="std std-ref">implantation file(s)</span></a> to work.
+Extra data, such as imaging data, may be used by external software such as <a class="reference internal" href="#hibop"><span class="std std-ref">HiBoP</span></a>, but remain optional.</p>
+</section>
+<section id="compatible-formats">
+<span id="file-formats"></span><h3>Compatible formats<a class="headerlink" href="#compatible-formats" title="Permalink to this headline"></a></h3>
+<p>It is mandatory to follow BIDS guidelines <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable">(bids-specification.readthedocs.io)</a>
+and convert the data into BIDS friendly formats before processing it using CCEP Manager.
+Accordingly, iEEG data should be either in <em>BrainVision format</em> or <em>European Data Format</em>.
+Imaging data, if any, should be in <em>NIfTI format</em>.</p>
+<p>Suitable formats are listed in the <a class="reference internal" href="#compatible-ieeg"><span class="std std-ref">table of compatible iEEG formats</span></a>:</p>
+<table class="docutils align-default" id="compatible-ieeg">
+<colgroup>
+<col style="width: 66%" />
+<col style="width: 34%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>FILE FORMAT</p></th>
+<th class="head"><p>FILE EXTENSION(S)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>BrainVision</p></td>
+<td><p>*.hdr, *.vmrk, *.eeg</p></td>
+</tr>
+<tr class="row-odd"><td><p>European Data Format (continuous only) (EDF+C)</p></td>
+<td><p>*.edf</p></td>
+</tr>
+<tr class="row-even"><td><p>Microdmed</p></td>
+<td><p>*.trc</p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><p><strong>Compatible iEEG formats.</strong>  <em>List of iEEG data formats compatible with CCEP Manager.</em></p>
+</div></blockquote>
+</section>
+<section id="ieeg-notes">
+<span id="event-notes"></span><h3>iEEG notes<a class="headerlink" href="#ieeg-notes" title="Permalink to this headline"></a></h3>
+<p>CCEP Manager relies on the notes found in iEEG files (see <a class="reference internal" href="process.html#preprocessing-step"><span class="std std-ref">preprocessing step</span></a>)
+together with a threshold-based detection algorithm (see <a class="reference internal" href="process.html#cropping-step"><span class="std std-ref">cropping step</span></a>)
+to identify stimulation periods. In order to ease the identification process and avoid note parsing errors,
+it is strongly advised to clean the notes beforehand by using the following labelling convention:</p>
+<blockquote>
+<div><p><em>&lt;label1&gt; &lt;label2&gt; &lt;intensity&gt; mA &lt;frequency&gt; Hz &lt;pulse width&gt; us</em></p>
+<p><em>(e.g.: Bp02 Bp03 3mA 1Hz 1000us)</em></p>
+</div></blockquote>
+<ul class="simple">
+<li><p><em>&lt;label1&gt; &lt;label2&gt;</em> are the labels of the stimulating electrodes (alphanumeric).</p></li>
+<li><p><em>&lt;intensity&gt;</em> is the stimulation intensity in mA (number).</p></li>
+<li><p><em>&lt;frequency&gt;</em> is the stimulation frequency in Hz (number).</p></li>
+<li><p><em>&lt;pulse width&gt;</em> is the pulse width in us (number).</p></li>
+</ul>
+</section>
+<section id="implantation-file">
+<span id="implantation-files"></span><h3>Implantation file<a class="headerlink" href="#implantation-file" title="Permalink to this headline"></a></h3>
+<p>During the very first step of the processing pipeline, each iEEG file will be associated with
+an implantation file (see <a class="reference internal" href="process.html#implantation-step"><span class="std std-ref">implantation step</span></a>).
+Implantation file(s) thus have to be prepared beforehand.
+In its current iteration, CCEP Manager expects implantation files
+generated by the <a class="reference internal" href="#intranat"><span class="std std-ref">IntrAnat</span></a> software (<a class="reference internal" href="references.html#deman-2018" id="id15"><span>[Deman_2018]</span></a>).</p>
+<p>IntrAnat is used to localize and label the electrode contacts in 3D space
+and generate Comma-Separated Values (*.csv) implantation files which specify the coordinates of each
+electrode in native and MNI spaces, along with corresponding cortical parcels. Cortical parcels are obtained for different
+anatomical atlases defined either in the MRI native space:</p>
+<ul class="simple">
+<li><p>MarsAtlas (<a class="reference internal" href="references.html#auzias-2016" id="id16"><span>[Auzias_2016]</span></a>)</p></li>
+<li><p>Freesurfer (<a class="reference internal" href="references.html#destrieux-2010" id="id17"><span>[Destrieux_2010]</span></a>)</p></li>
+<li><p>Lausanne Atlas (<a class="reference internal" href="references.html#hagmann-2008" id="id18"><span>[Hagmann_2008]</span></a>)</p></li>
+</ul>
+<p>or in the MNI space:</p>
+<ul class="simple">
+<li><p>Brodmann (<a class="reference internal" href="references.html#brodmann-1909" id="id19"><span>[Brodmann_1909]</span></a>)</p></li>
+<li><p>Automated Anatomical Labeling AAL (<a class="reference internal" href="references.html#tzourio-mazoyer-2002" id="id20"><span>[Tzourio-Mazoyer_2002]</span></a>)</p></li>
+<li><p>MaxProbMap (<a class="reference internal" href="references.html#hammers-2003" id="id21"><span>[Hammers_2003]</span></a>)</p></li>
+<li><p>Human Connectome Project (<a class="reference internal" href="references.html#glasser-2016" id="id22"><span>[Glasser_2016]</span></a>)</p></li>
+</ul>
+<p>Each electrode contact is assigned to the grey or white matter and to specific anatomical parcels by taking the most
+frequent voxel label in a sphere of 3 mm radius around each contact center (<a class="reference internal" href="references.html#deman-2018" id="id23"><span>[Deman_2018]</span></a>).
+All this information is summarized in the implantation file used by CCEP Manager.</p>
+<p>In addition, IntrAnat now proposes accessibility options to ease the importation of imaging data from a BIDS database
+and a feature to export generated implantation files in suitable BIDS derivative folder.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="quick_start.html" class="btn btn-neutral float-left" title="Quick start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="interface.html" class="btn btn-neutral float-right" title="User interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Anthony Boyer.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

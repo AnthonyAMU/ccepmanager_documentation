@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tools &mdash; CCEP Manager 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Troubleshooting (EMPTY)" href="troubleshooting.html" />
+    <link rel="prev" title="Atlases (EMPTY)" href="atlases.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> CCEP Manager
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface.html">User interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="process.html">Processing data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="atlases.html">Atlases (EMPTY)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#time-series-visualization">Time series visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#quality-control">Quality control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ccep-visualization">CCEP visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#feature-tables">Feature tables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting (EMPTY)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limitationsandperspectives.html">Limitations and perspectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments (EMPTY)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hip.html">CCEP Manager in the HIP (EMPTY)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials (EMPTY)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CCEP Manager</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Tools</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/tools.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tools">
+<span id="id1"></span><h1>Tools<a class="headerlink" href="#tools" title="Permalink to this headline"></a></h1>
+<p>It is necessary to <a class="reference internal" href="interface.html#parameters-ui"><span class="std std-ref">specify the paths</span></a> to both <a class="reference internal" href="prerequisites.html#anywave"><span class="std std-ref">AnyWave</span></a> and <a class="reference internal" href="prerequisites.html#hibop"><span class="std std-ref">HiBoP</span></a> executable files
+in order to <a class="reference internal" href="#time-series-visualization"><span class="std std-ref">visualize time series</span></a> and <a class="reference internal" href="#ccep-visualization"><span class="std std-ref">CCEPs</span></a> with those softwares.</p>
+<section id="time-series-visualization">
+<span id="id2"></span><h2>Time series visualization<a class="headerlink" href="#time-series-visualization" title="Permalink to this headline"></a></h2>
+<p>It is possible to visualize the time series of both <a class="reference internal" href="process.html#preprocessing-step"><span class="std std-ref">preprocessed iEEG files</span></a>
+and <a class="reference internal" href="process.html#cropping-step"><span class="std std-ref">cropped stimulations</span></a> using <a class="reference internal" href="prerequisites.html#anywave"><span class="std std-ref">AnyWave</span></a>.
+Use the <a class="reference internal" href="interface.html#wrench-ui"><span class="std std-ref">time series tool</span></a>, after selecting preprocessing or cropping step(s) in the <a class="reference internal" href="interface.html#panels-ui"><span class="std std-ref">interactive table</span></a>.</p>
+<p>A popup will show relevant preprocessed iEEG files or cropped stimulations to display.</p>
+<figure class="align-default" id="id6">
+<span id="time-series-selection"></span><a class="reference internal image-reference" href="_images/cpman_timeseries_anywave.png"><img alt="_images/cpman_timeseries_anywave.png" src="_images/cpman_timeseries_anywave.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>Time series visualization.</strong> <em>It is possible to visualize preprocessed iEEG file(s) or cropped stimulation(s) in</em> <a class="reference internal" href="prerequisites.html#anywave"><span class="std std-ref">AnyWave</span></a> <em>.</em></span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id7">
+<a class="reference internal image-reference" href="_images/anywave.png"><img alt="_images/anywave.png" src="_images/anywave.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>AnyWave.</strong> <em>Visualization of a cropped stimulation using</em> <a class="reference internal" href="prerequisites.html#anywave"><span class="std std-ref">AnyWave</span></a> <em>.</em></span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="quality-control">
+<h2>Quality control<a class="headerlink" href="#quality-control" title="Permalink to this headline"></a></h2>
+<p>AnyWave can also be used to <a class="reference internal" href="process.html#quality-control"><span class="std std-ref">mark or correct bad channels</span></a>.
+Use the <a class="reference internal" href="interface.html#wrench-ui"><span class="std std-ref">time series tool</span></a>, after selecting cropping step(s) in the <a class="reference internal" href="interface.html#panels-ui"><span class="std std-ref">interactive table</span></a>.</p>
+<p>A popup will show all cropped stimulations.</p>
+<figure class="align-default" id="id8">
+<a class="reference internal image-reference" href="_images/cpman_validate.png"><img alt="_images/cpman_validate.png" src="_images/cpman_validate.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>Display and validate cropped stimulation.</strong> <em>Select files to display in</em> <a class="reference internal" href="prerequisites.html#anywave"><span class="std std-ref">AnyWave</span></a> <em>and validate bad channels.</em></span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Once a cropped stimulation is displayed in <a class="reference internal" href="prerequisites.html#anywave"><span class="std std-ref">AnyWave</span></a>,
+edit the montage as illustrated in the <a class="reference internal" href="#anywave-montage"><span class="std std-ref">figure below</span></a>. This will write a companion <em>*.mat.bad</em> file
+used by CCEP Manager during the validation process to update bad channels in all companion files accordingly.</p>
+<figure class="align-default" id="id9">
+<span id="anywave-montage"></span><a class="reference internal image-reference" href="_images/badchannels.png"><img alt="_images/badchannels.png" src="_images/badchannels.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>Bad channels.</strong> <em>Specify bad channels in</em> <a class="reference internal" href="prerequisites.html#anywave"><span class="std std-ref">AnyWave</span></a> <em>by editing the montage.</em></span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="ccep-visualization">
+<span id="id3"></span><h2>CCEP visualization<a class="headerlink" href="#ccep-visualization" title="Permalink to this headline"></a></h2>
+<p>It is possible to visualize CCEPs computed from <a class="reference internal" href="process.html#cropping-step"><span class="std std-ref">cropped stimulations</span></a> using <a class="reference internal" href="prerequisites.html#hibop"><span class="std std-ref">HiBoP</span></a>.
+Access the <a class="reference internal" href="interface.html#wrench-ui"><span class="std std-ref">CCEP tool</span></a>, after selecting cropping step(s) in the <a class="reference internal" href="interface.html#panels-ui"><span class="std std-ref">interactive table</span></a>.</p>
+<p>A HiBoP project will be created and will contain all the <a class="reference internal" href="process.html#cropping-step"><span class="std std-ref">cropped stimulations</span></a>, the electrode coordinates
+and imaging data (if any) will be imported as well. It will also include a basic HiBoP protocol and visualizations
+as illustrated in the <a class="reference internal" href="#hibop-example"><span class="std std-ref">figure below</span></a>. Please refer to <a class="reference internal" href="prerequisites.html#hibop"><span class="std std-ref">HiBoP</span></a> documentation for more information.
+By default, the HiBoP project will be created in the <em>/code</em> directory of the active BIDS database.</p>
+<figure class="align-default" id="id10">
+<span id="hibop-example"></span><a class="reference internal image-reference" href="_images/hibopex.png"><img alt="_images/hibopex.png" src="_images/hibopex.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>HiBoP.</strong> <em>Visualization of a CCEP using HiBoP.</em></span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="feature-tables">
+<span id="id4"></span><h2>Feature tables<a class="headerlink" href="#feature-tables" title="Permalink to this headline"></a></h2>
+<p>The <a class="reference internal" href="interface.html#wrench-ui"><span class="std std-ref">features tool</span></a> can be used to store the various scores extracted from CCEP features into convenient text (*.txt) files.
+It will generate a text file for each <a class="reference internal" href="process.html#features-step"><span class="std std-ref">feature</span></a> and threshold when applicable (<a class="reference internal" href="references.html#trebaul-2018" id="id5"><span>[Trebaul_2018]</span></a>).</p>
+<p>Output files can be found in the following directory:</p>
+<blockquote>
+<div><p><em>BIDS root/derivatives/ccep_manager/step_averaging/sub-&lt;id&gt;/ses-&lt;session&gt;/ieeg/&lt;iEEG file&gt;/features_tables</em></p>
+</div></blockquote>
+<p>And use the following naming convention:</p>
+<blockquote>
+<div><p><em>&lt;iEEG file&gt;_&lt;feature&gt;_&lt;threshold&gt;.txt</em></p>
+<ul class="simple">
+<li><p><em>&lt;iEEG&gt;</em> is the name of the iEEG file.</p></li>
+<li><p><em>&lt;feature&gt;</em> is the name of the <a class="reference internal" href="process.html#ccep-features-table"><span class="std std-ref">feature</span></a>.</p></li>
+<li><p><em>&lt;threshold&gt;</em> is the threshold value.</p></li>
+</ul>
+</div></blockquote>
+<p>In each text file, rows and columns correspond to stimulating and recording bipolar channels respectively.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="atlases.html" class="btn btn-neutral float-left" title="Atlases (EMPTY)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="troubleshooting.html" class="btn btn-neutral float-right" title="Troubleshooting (EMPTY)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Anthony Boyer.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

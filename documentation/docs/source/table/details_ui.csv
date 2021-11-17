@@ -1,0 +1,18 @@
+**WIDGET**, **DESCRIPTION** , **Figure**
+**Subject list**,**List of selectable subjects.**,**1**
+Subject,Active subject.,1a
+**Step tabs**,**Tab for each step of the active subject.**,**2; 3; 4; 5**
+BIDS,BIDS related information.,2
+Path,Path to the step directory.,2a
+Sessions,Processed BIDS session(s).,2b
+Status,Status information.,3
+General,General status of the step.,3a
+Detailed,Detailed status of the step. Session-wise status.,3b
+I/O,Step-specific input and output files.,4
+Implantations,List of implantation files + matched (i)EEG file status. (3.1.1).,NS
+Preprocessed,List of preprocessed (i)EEG files + preprocessing status. (3.1.2),NS
+Stimulations,List of cropped stimulations + quality control status. (3.1.3),4a
+Features,List of cropped stimulations + feature extraction status. (3.1.5),NS
+Execution,Execution information.,5
+Last,Date of the last execution.,5a
+Reports,List of execution reports.,5b
