@@ -109,7 +109,7 @@ Define a processing pipeline
 Cells from the :ref:`interactive table<ui table>` are selectable and a number of contextual actions can be performed
 on the active selection. Select the first 3 steps of a subject who has the iEEG data you would like
 to process and for which the corresponding :ref:`implantation file(s)<implantation files>` have been prepared.
-Then, right click the table and select the *RUN* option (|pipeline button|) from the contextual menu to spawn the data :ref:`processing interface<Process UI>`.
+Then, right click the table and select the *RUN* option (|pipeline button|) from the contextual menu to spawn the :ref:`data processing interface<Process UI>`.
 
 .. |pipeline button| image:: art/pipeline_20_100x100.png
 	:width: 25px
